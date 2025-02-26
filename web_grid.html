@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grille de Cartes Responsive</title>
+    <style>
+        /* Style général */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Conteneur de la grille */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Style des cartes */
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Image des cartes */
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Bouton */
+        .card button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-size: 16px;
+        }
+
+        .card button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsivité */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr; /* 1 colonne */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <img src="Image/Yu zhong.jpg" alt="Image">
+            <h3>Yu Zhong</h3>
+            <p>Combattant Exp Lane</p>
+            <button onclick="secret()">En savoir plus</button>
+        </div>
+        <div class="card">
+            <img src="Image/Badang.jpg" alt="Image">
+            <h3>Badang</h3>
+            <p>Combattant Exp Lane</p>
+            <button onclick="secret()">En savoir plus</button>
+        </div>
+        <div class="card">
+            <img src="Image/Cecilion.jpg" alt="Image">
+            <h3>Cecilion</h3>
+            <p>Mage mid Lane</p>
+            <button onclick="secret()">En savoir plus</button>
+        </div>
+        <div class="card">
+            <img src="Image/Hylos.jpg" alt="Image">
+            <h3>Hylos</h3>
+            <p>Tank Roam</p>
+            <button onclick="secret()">En savoir plus</button>
+        </div>
+    </div>
+
+    <script>
+        function secret() {
+            window.location.href = "https://www.youtube.com/watch?v=E4WlUXrJgy4&t=5s";
+        }
+    </script>
+
+</body>
+</html>
+
